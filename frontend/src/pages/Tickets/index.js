@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -67,7 +67,13 @@ const useStyles = makeStyles((theme) => ({
 const Chat = () => {
   const classes = useStyles();
   const { ticketId } = useParams();
-
+  useEffect(() => {
+    if(ticketId) {
+      document.title=`Ticket #${ticketId}`
+    } else {
+      document.title=`Tickets`
+    }
+  })
   return (
     <div className={classes.chatContainer}>
       <div className={classes.chatPapper}>

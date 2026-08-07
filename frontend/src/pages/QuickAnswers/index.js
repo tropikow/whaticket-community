@@ -136,7 +136,7 @@ const QuickAnswers = () => {
         });
       }
     });
-
+    document.title= "Quick Answers"
     return () => {
       socket.disconnect();
     };

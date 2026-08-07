@@ -72,7 +72,7 @@ const Login = () => {
     e.preventDefault();
     handleLogin(user);
   };
-
+  document.title= "Login"
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />

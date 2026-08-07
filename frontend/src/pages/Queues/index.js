@@ -122,7 +122,7 @@ const Queues = () => {
         dispatch({ type: "DELETE_QUEUE", payload: data.queueId });
       }
     });
-
+    document.title= "Queues"
     return () => {
       socket.disconnect();
     };

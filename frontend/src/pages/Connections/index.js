@@ -249,7 +249,7 @@ const Connections = () => {
 			</>
 		);
 	};
-
+	document.title= "Connections"
 	const renderStatusToolTips = whatsApp => {
 		return (
 			<div className={classes.customTableCell}>
