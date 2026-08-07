@@ -14,3 +14,7 @@ export function getBackendUrl() {
 export function getHoursCloseTicketsAuto() {
   return getConfig("VITE_HOURS_CLOSE_TICKETS_AUTO");
 }
+
+export function getTitleApp () {
+  return getConfig("VITE_APP_TITLE", 'Whaticket')
+}
