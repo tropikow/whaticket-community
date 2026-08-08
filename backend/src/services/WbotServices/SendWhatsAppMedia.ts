@@ -4,6 +4,7 @@ import Ticket from "../../models/Ticket";
 import { whatsappProvider, ProviderMessage } from "../../providers/WhatsApp";
 
 import formatBody from "../../helpers/Mustache";
+import { logger } from "../../utils/logger";
 
 interface Request {
   media: Express.Multer.File;
@@ -53,7 +54,8 @@ const SendWhatsAppMedia = async ({
     fs.unlinkSync(media.path);
 
     return sentMessage;
-  } catch (err) {    
+  } catch (err) {
+    logger.error(`Could not send whatsapp media. Err: ${err}`);
     throw new AppError("ERR_SENDING_WAPP_MSG");
   }
 };
