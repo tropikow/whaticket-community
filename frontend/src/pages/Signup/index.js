@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
