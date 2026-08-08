@@ -66,14 +66,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Chat = () => {
   const classes = useStyles();
-  const { ticketId } = useParams();
-  useEffect(() => {
-    if(ticketId) {
-      document.title=`Ticket #${ticketId}`
-    } else {
-      document.title=`Tickets`
-    }
-  })
+  const { ticketId } = useParams();  
   return (
     <div className={classes.chatContainer}>
       <div className={classes.chatPapper}>

@@ -89,10 +89,6 @@ const SignUp = () => {
 		}
 	};
 
-	useEffect(() => {
-		document.title="SignUp"
-	})
-
 	return (
 		<Container component="main" maxWidth="xs">
 			<CssBaseline />

@@ -117,8 +117,7 @@ const Users = () => {
         }
       };
       fetchUsers();
-    }, 500);
-    document.title= "Users"
+    }, 500);    
     return () => clearTimeout(delayDebounceFn);
   }, [searchParam, pageNumber]);
 
