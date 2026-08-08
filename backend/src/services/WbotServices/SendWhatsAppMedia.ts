@@ -16,7 +16,7 @@ const SendWhatsAppMedia = async ({
   ticket,
   body
 }: Request): Promise<ProviderMessage> => {
-  try {
+  try {    
     if (!ticket.whatsappId) {
       throw new AppError("ERR_TICKET_NO_WHATSAPP");
     }
@@ -53,8 +53,7 @@ const SendWhatsAppMedia = async ({
     fs.unlinkSync(media.path);
 
     return sentMessage;
-  } catch (err) {
-    console.log(err);
+  } catch (err) {    
     throw new AppError("ERR_SENDING_WAPP_MSG");
   }
 };
